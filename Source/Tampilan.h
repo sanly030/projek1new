@@ -10,4 +10,5 @@ void tampilanawal() {
     fullscreen();
     system("color F1 ");
     logo();
+    kontol;
 }

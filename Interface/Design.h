@@ -1,11 +1,7 @@
-#ifndef DESIGN_H
-#define DESIGN_H
-#define NMAX 100
-#endif //DESIGN_H
 
-void logo();
-void loading();
-void PrintFile(char file[], int x, int y);
+// void logo();
+// void loading();
+// void PrintFile(char file[], int x, int y);
 
 void hideCursor() {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -277,3 +273,33 @@ void blankScreen(i,j){
     }
 }
 
+//====== Garis kotak (Border) dengan karakter full blok ========
+void borderFullBlock(int x, int y, int lebar, int tinggi) {
+    // ========= garis atas
+    for (int i = x; i < x + lebar; ++i) {
+        gotoprintchar(i, y, 219);
+    }
+
+    // ========= Menggambar garis samping
+    for (int j = y + 1; j < y + tinggi; ++j) {
+        gotoprintchar(x, j, 219);
+        gotoprintchar(x + lebar - 1, j, 219);
+    }
+
+    // ========= Menggambar garis bawah
+    for (int i = x; i < x + lebar; ++i) {
+        gotoprintchar(i, y + tinggi - 1,219);
+    }
+}
+
+void garisFullBlokVertical(int x, int y, int tinggi) {
+    for (int i = 0; i < tinggi; ++i) {
+        gotoprintchar(x, y + i ,219);
+    }
+}
+
+void garisFullBlokHorizontal(int x, int y, int lebar) {
+    for (int i = 0; i < lebar; ++i) {
+        gotoprintchar(x + i, y ,219);
+    }
+}

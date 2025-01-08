@@ -1,14 +1,7 @@
-#ifndef TAMPILAN_H
-
-#define TAMPILAN_H
-
-#endif //TAMPILAN_H
-
 void tampilanawal() {
-    // hideCursor();
+    hideCursor();
     disableScrollBar();
     fullscreen();
-    system("color F1 ");
+    system("color 71 ");
     logo();
-    kontol;
 }

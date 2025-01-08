@@ -1,20 +1,9 @@
-#ifndef LOGIN_H
-#define LOGIN_H
 
-#endif //LOGIN_H
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <Windows.h>
-// #include <conio.h>
-
-void gotoxy(int x,int y);
-void PrintFile(char file[], int x, int y);
-void fullscreen();
-void Username(char username[]);
-void Password(char password[]);
-void frame(int x, int y);
+// void gotoxy(int x,int y);
+// void fullscreen();
+// void Username(char username[]);
+// void Password(char password[]);
+// void frame(int x, int y);
 // void HalDashboard();
 // void HalLogin();
 int i, x, y;
@@ -116,6 +105,7 @@ void HalLogin() {
     if((strcmp(adm.username, "Admin")== 0) && (strcmp(adm.password, "Admin") == 0)) {
         MessageBox(NULL, "Welcome To Admin", "Notification", MB_OK | MB_ICONINFORMATION | MB_DEFAULT_DESKTOP_ONLY);
         system("cls");
+        DashboardAdmin();
     }else {
         MessageBox(NULL, "Masukan Username dan Password Dengan Benar!!!", "Notification", MB_OK | MB_ICONERROR | MB_DEFAULT_DESKTOP_ONLY);
          clearArea(96,35,8,1);

@@ -10,10 +10,16 @@
 #include "Interface/Design.h"
 #include "Source/Tampilan.h"
 #include "Source/Deklarasi.h"
+
+#include "Source/MASTER PETUGAS.h"
+
 #include "Source/Login.h"
+#include "Source/Dashboard.h"
 
 main()
 {
+    // disableScrollBar();
+    // fullscreen();
     tampilanawal();
     HalLogin();
     getch();

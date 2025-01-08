@@ -1,0 +1,3 @@
+void DashboardPetugas() {
+    menuPetugas();
+}

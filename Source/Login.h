@@ -1,4 +1,5 @@
 
+#include "Dashboard.h"
 // void gotoxy(int x,int y);
 // void fullscreen();
 // void Username(char username[]);
@@ -47,8 +48,11 @@ void HalLogin() {
     PrintFile("..//Asset/ataskanan.txt", 196, 1);
     PrintFile("..//Asset/bawahkiri.txt", 2, 47);
     PrintFile("..//Asset/bawahkanan.txt", 196, 47);
+    PrintFile("..//Asset/Welcome.txt", 54, 6);
 
     frame(75,23);
+    PrintFile("..//Asset/Login.txt", 90, 24);
+
 
     //kotak username
     gotoxy(95, 36);
@@ -101,16 +105,17 @@ void HalLogin() {
     Username(adm.username);
     gotoxy(96, 38);
     Password(adm.password);
-
     if((strcmp(adm.username, "Admin")== 0) && (strcmp(adm.password, "Admin") == 0)) {
         MessageBox(NULL, "Welcome To Admin", "Notification", MB_OK | MB_ICONINFORMATION | MB_DEFAULT_DESKTOP_ONLY);
         system("cls");
+
         DashboardAdmin();
     }else {
         MessageBox(NULL, "Masukan Username dan Password Dengan Benar!!!", "Notification", MB_OK | MB_ICONERROR | MB_DEFAULT_DESKTOP_ONLY);
          clearArea(96,35,8,1);
          clearArea(96,38,8,1);
-        exit(0);
+        // exit(0);
+        HalLogin();
 
     }
 }

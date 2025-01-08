@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 23)
 
 add_executable(ProCleanOrganizer main.c
         Source/Dashboard.h
-        "Source/MASTER PETUGAS.h")
+        "Source/MASTER PETUGAS.h"
+        "Source/Dashboard Petugas.h")

@@ -1,4 +1,5 @@
-
+#ifndef DASHBOARD_H
+#define DASHBOARD_H
 void DashboardAdmin() {
     system("color 71");
 
@@ -20,7 +21,11 @@ void DashboardAdmin() {
     gotoxy(29,18);
     scanf("%d",&opsi);
     switch (opsi) {
-        case 1:menuPetugas();break;
+        case 1:
+            clearArea(3,9,46,43);
+        menuPetugas();
+        break;
+
     }
 }
 
@@ -103,3 +108,4 @@ void DashboardAdmin() {
 // }
 // void menuPetugas();
 
+#endif

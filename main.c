@@ -15,12 +15,12 @@
 
 #include "Source/Login.h"
 #include "Source/Dashboard.h"
+#include "Source/Dashboard Petugas.h"
 
 main()
 {
     // disableScrollBar();
     // fullscreen();
     tampilanawal();
-    HalLogin();
     getch();
 }
